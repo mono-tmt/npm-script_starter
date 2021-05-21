@@ -1,0 +1,20 @@
+{
+  "name": "npm-script_starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono-tmt/npm-script_starter.git"
+  },
+  "keywords": [],
+  "author": "mono-tmt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mono-tmt/npm-script_starter/issues"
+  },
+  "homepage": "https://github.com/mono-tmt/npm-script_starter#readme"
+}
