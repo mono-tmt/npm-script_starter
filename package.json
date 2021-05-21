@@ -15,7 +15,10 @@
     "start:server": "browser-sync start -s dist -w src/*.html src/css/*.css src/js/*.js",
     "watch:all": "run-p watch:pug2html watch:scss2cssprefix watch:js watch:img start:server",
     "lint:scss": "stylelint \"**/*.scss\"",
-    "format:scss": "stylelint --fix \"**/*.scss\""
+    "format:scss": "stylelint --fix \"**/*.scss\"",
+    "lint:js": "eslint src/js/**/*.js",
+    "format:js": "eslint src/js/**/*.js --fix",
+    "format:all":"run-p format:scss format:js"
   },
   "repository": {
     "type": "git",
@@ -29,10 +32,13 @@
   },
   "homepage": "https://github.com/mono-tmt/npm-script_starter#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "chokidar-cli": "^2.1.0",
     "cpx": "^1.5.0",
+    "eslint": "^7.26.0",
     "imagemin-cli": "^6.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-keep-folder": "^5.3.2",
