@@ -18,7 +18,11 @@
     "format:scss": "stylelint --fix \"**/*.scss\"",
     "lint:js": "eslint src/js/**/*.js",
     "format:js": "eslint src/js/**/*.js --fix",
-    "format:all": "run-p format:scss format:js"
+    "format:all": "run-p format:scss format:js",
+    "min:css":"cleancss -o dist/css/style.css dist/css/style.css",
+    "min:js": "uglifyjs dist/js/main.js -o dist/js/main.js",
+    "delete:map":"rimraf dist/**/*.map",
+    "prepare:all":"run-p min:js min:css delete:map"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -50,6 +54,7 @@
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "chokidar-cli": "^2.1.0",
+    "clean-css-cli": "^5.3.0",
     "cpx": "^1.5.0",
     "eslint": "^7.26.0",
     "imagemin-cli": "^6.0.0",
@@ -73,6 +78,7 @@
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "uglify-es": "^3.3.9"
   }
 }
