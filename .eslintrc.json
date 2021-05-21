@@ -1,13 +1,13 @@
 {
   "env": {
-    "es2018": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "extends": [
-    "eslint:recommended",
-    "prettier"
+    "eslint:recommended"
   ],
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 2015
   }
 }
