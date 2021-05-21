@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:css": "postcss dist/css/style.css -u autoprefixer -o dist/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mono-tmt/npm-script_starter/issues"
   },
-  "homepage": "https://github.com/mono-tmt/npm-script_starter#readme"
+  "homepage": "https://github.com/mono-tmt/npm-script_starter#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1"
+  }
 }
